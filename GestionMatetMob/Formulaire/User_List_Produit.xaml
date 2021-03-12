@@ -8,7 +8,7 @@
              d:DesignHeight="566" d:DesignWidth="873">
     <Grid>
         <StackPanel Background="#FF171D30" Margin="0,10,20,10">
-            <Button Margin="20,20,605,20" Height="48" Content="Ajouter un article" FontFamily="Trebuchet MS" FontSize="20" ></Button>
+            <Button Margin="20,20,605,20" Height="48" Content="Ajouter un article" FontFamily="Trebuchet MS" FontSize="20" Click="Button_Click" ></Button>
             <Button Margin="300,-80,313,0" Content="Modifier un article" FontFamily="Trebuchet MS" FontSize="20" Height="51"></Button>
             <Button Content="Supprimer un article" FontFamily="Trebuchet MS" FontSize="20" Height="54" Margin="592,-80,20,0"/>
             <TextBox Margin="20,20,0,20" Height="50" HorizontalAlignment="Left" Width="375" ></TextBox>
