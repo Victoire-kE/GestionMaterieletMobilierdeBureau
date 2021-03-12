@@ -24,5 +24,11 @@ namespace GestionMatetMob.Formulaire
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Ajout_article a1 = new Ajout_article();
+            
+        }
     }
 }
