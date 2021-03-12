@@ -8,8 +8,8 @@
         <EntityTypeShape EntityType="Gestion_MaterielModel.Affectation" Width="1.5" PointX="5.125" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Gestion_MaterielModel.Article" Width="1.5" PointX="3" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Gestion_MaterielModel.Caracteristique" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Gestion_MaterielModel.Categorie" Width="1.5" PointX="2.875" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Gestion_MaterielModel.Direction" Width="1.5" PointX="5.125" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gestion_MaterielModel.Categorie" Width="1.5" PointX="2.875" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gestion_MaterielModel.Direction" Width="1.5" PointX="5.125" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="Gestion_MaterielModel.Service" Width="1.5" PointX="7.375" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Gestion_MaterielModel.Utilisateur" Width="1.5" PointX="0.5" PointY="3.375" IsExpanded="true" />
         <AssociationConnector Association="Gestion_MaterielModel.FK__Affectati__code___1A14E395" ManuallyRouted="false" />
