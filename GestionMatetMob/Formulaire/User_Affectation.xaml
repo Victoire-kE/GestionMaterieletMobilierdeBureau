@@ -7,6 +7,30 @@
              mc:Ignorable="d" 
              d:DesignHeight="566" d:DesignWidth="873">
     <Grid>
-        <StackPanel Margin="10" Background="#FF252F44"></StackPanel>
+        <StackPanel Margin="2" Background="#FF252F44" >
+            <StackPanel Margin="20,20,20,10" Height="54">
+                <TextBlock Height="43" Margin="20,5,20,10" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Trebuchet Ms" FontSize="30" Foreground="#FFA9ACCF">Affectation d'un article à un Service</TextBlock>
+            </StackPanel>
+            <StackPanel Height="377" Margin="40,0,464,0">
+                <Label Margin="20" Content="Numéro d'affectation" FontFamily="Trebuchet MS" FontSize="20" Foreground="White"></Label>
+                <Label Margin="20" Content="Nom de l'article" FontFamily="Trebuchet MS" FontSize="20" Foreground="White"></Label>
+                <Label Margin="20" Content="Nom du service" FontFamily="Trebuchet MS" FontSize="20" Foreground="White"></Label>
+                <Label Margin="20" Content="Date d'affectation" FontFamily="Trebuchet MS" FontSize="20" Foreground="White"></Label>
+                <Label Margin="20" Content="Quantité affectée" FontFamily="Trebuchet MS" FontSize="20" Foreground="White"></Label>
+            </StackPanel>
+            <StackPanel Height="368" Margin="458,-390,10,10">
+                <TextBox x:Name="tbNumAffectation" Margin="20,25,10,40" Height="31"></TextBox>
+                <TextBox x:Name="tbNomArticle" Margin="20,0,10,0" Height="32"></TextBox>
+                <TextBox x:Name="tbNomService" Margin="20,40,10,10" Height="36"></TextBox>
+                <DatePicker x:Name="DpDateAffectation" Margin="20,30,10,10" Height="30"></DatePicker>
+                <TextBox x:Name="tbQuantité" Margin="20,20,10,0" Height="36"></TextBox>
+            </StackPanel>
+            <StackPanel Margin="20,20,20,10" Height="78">
+                <Button x:Name="btAnnuler" Margin="15,20,602,0" Height="42" Content="Annuler" FontFamily="trebuchet MS" FontSize="25" Foreground="Red" Background="#FFE2DCDC"/>
+                <Button x:Name="btEnreg" Margin="310,-45,305,0" Height="44" Content="Enrégistrer" FontFamily="trebuchet MS" FontSize="25" Foreground="Blue"  />
+                <Button x:Name="btQuitter" Margin="605,-50,20,0"  Height="44" Content="Quitter" FontFamily="trebuchet MS" FontSize="25" Foreground="Red" Background="#FFE2DCDC"/>
+            </StackPanel>
+        </StackPanel>
+
     </Grid>
 </UserControl>
