@@ -8,7 +8,7 @@
       d:DesignHeight="500" d:DesignWidth="600"
       Title="Ajout_article">
 
-    <Grid Background="Black">
+    <Grid x:Name="pageAjoutArticle" Background="Black">
         <StackPanel Margin="5" Background="#FF171D30">
             <StackPanel Height="326" Margin="40,50,329,0">
                 <Label Margin="20" Content="Code de l'article" FontFamily="Trebuchet MS" FontSize="20" Foreground="White"></Label>
@@ -17,14 +17,14 @@
                 <Label Margin="20" Content="Caractéristique" FontFamily="Trebuchet MS" FontSize="20" Foreground="White"></Label>
             </StackPanel>
             <StackPanel Height="306" Margin="276,-350,10,10">
-                <TextBox Margin="20,25,10,40" Height="31"></TextBox>
-                <TextBox Margin="20,0,10,0" Height="32"></TextBox>
-                <TextBox Margin="20,40,10,10" Height="36"></TextBox>
-                <TextBox Margin="20,30,10,10" Height="38"></TextBox>
+                <TextBox x:Name="tbCodeArticle" Margin="20,25,10,40" Height="31"></TextBox>
+                <TextBox x:Name="tbNomArticle" Margin="20,0,10,0" Height="32"></TextBox>
+                <TextBox x:Name="tbCategorie" Margin="20,40,10,10" Height="36"></TextBox>
+                <TextBox x:Name="tbCaract" Margin="20,30,10,10" Height="38"></TextBox>
             </StackPanel>
             <StackPanel Margin="10,0,10,10" Height="78">
-                <ToggleButton Margin="15,20,325,0" Height="45" Content="Annuler" FontFamily="trebuchet MS" FontSize="25" Foreground="Red" Background="#FFE2DCDC"/>
-                <ToggleButton Margin="308,-50,10,0" Height="44" Content="Enrégistrer" FontFamily="trebuchet MS" FontSize="25" Foreground="Blue"  />
+                <ToggleButton x:Name="btAnnuler" Margin="15,20,325,0" Height="45" Content="Annuler" FontFamily="trebuchet MS" FontSize="25" Foreground="Red" Background="#FFE2DCDC"/>
+                <ToggleButton x:Name="btEnreg" Margin="308,-50,10,0" Height="44" Content="Enrégistrer" FontFamily="trebuchet MS" FontSize="25" Foreground="Blue"  />
             </StackPanel>
         </StackPanel>
     </Grid>
