@@ -15,7 +15,10 @@
             </StackPanel>
             <StackPanel Margin="10,20" Height="514">
                 <ToggleButton Margin="10,25" Height="50" FontFamily="Trebuchet MS" FontSize="20" Click="Button_Click" >
-                    <Image Margin="0" Source="C:\Users\Victoire_KE\source\repos\GestionMaterieletMobilierdeBureau\GestionMatetMob\images\home_64px.png" Width="48" HorizontalAlignment="Left" ></Image>
+                    <StackPanel>
+                        <Image Margin="0,0,130,10" Source="C:\Users\Victoire_KE\source\repos\GestionMaterieletMobilierdeBureau\GestionMatetMob\images\home_64px.png" Width="48" HorizontalAlignment="Left" ></Image>
+                        <TextBlock Margin="-120,-60,-150,0" Width="84" Height="30" FontFamily="Trebuchet ms" FontSize="20" TextAlignment="Center">Accueil</TextBlock>
+                    </StackPanel>  
                 </ToggleButton>
                 <Button Margin="10,25" Height="50" Content="Article" FontFamily="Trebuchet MS" FontSize="20"/>
                 <Button Margin="10,25" Height="50" Content="Affectation" FontFamily="Trebuchet MS" FontSize="20"/>
