@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GestionMatetMob.Formulaire;
 
 namespace GestionMatetMob.Formulaire
 {
@@ -23,12 +24,16 @@ namespace GestionMatetMob.Formulaire
         public User_List_Produit()
         {
             InitializeComponent();
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Ajout_article a1 = new Ajout_article();
-            
+            AjoutArticle a1 = new AjoutArticle();
+            a1.Show();
+           
+           
+
         }
     }
 }
