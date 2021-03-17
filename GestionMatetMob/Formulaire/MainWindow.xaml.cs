@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GestionMatetMob.Formulaire;
+using GestionMatetMob.Classes;
 
 
 namespace GestionMatetMob
@@ -28,9 +29,25 @@ namespace GestionMatetMob
             
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        { 
-            
+      
+        private void BtAccueil_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new ClassUserAccueil();
+        }
+
+        private void btArticle_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new ClassUserListProduit();
+        }
+
+        private void BtAffectation_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new ClassUserAffectaion();
+        }
+
+        private void BtQuitter(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
