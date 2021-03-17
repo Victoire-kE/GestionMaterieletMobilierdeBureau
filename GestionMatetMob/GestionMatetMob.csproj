@@ -76,6 +76,10 @@
     <Compile Include="Categorie.cs">
       <DependentUpon>DbGestion_Materiel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Classes\ClassUserAccueil.cs" />
+    <Compile Include="Classes\ClassUserAffectaion.cs" />
+    <Compile Include="Classes\ClassUserArticle.cs" />
+    <Compile Include="Classes\ClassUserListProduit.cs" />
     <Compile Include="DbGestion_Materiel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -83,6 +87,9 @@
     </Compile>
     <Compile Include="Direction.cs">
       <DependentUpon>DbGestion_Materiel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaire\AjoutArticle.xaml.cs">
+      <DependentUpon>AjoutArticle.xaml</DependentUpon>
     </Compile>
     <Compile Include="Formulaire\Ajout_article.xaml.cs">
       <DependentUpon>Ajout_article.xaml</DependentUpon>
@@ -102,6 +109,10 @@
     <Compile Include="Utilisateur.cs">
       <DependentUpon>DbGestion_Materiel.tt</DependentUpon>
     </Compile>
+    <Page Include="Formulaire\AjoutArticle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Formulaire\Ajout_article.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -175,13 +186,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="images\Image1.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="images\save_96px.png" />
+    <Resource Include="images\cancel_96px.png" />
     <Content Include="DbGestion_Materiel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DbGestion_Materiel.Context.cs</LastGenOutput>
@@ -192,6 +203,16 @@
       <DependentUpon>DbGestion_Materiel.edmx</DependentUpon>
       <LastGenOutput>DbGestion_Materiel.cs</LastGenOutput>
     </Content>
+    <Resource Include="images\add_article_96px.png" />
+    <Resource Include="images\edit_property_96px.png" />
+    <Resource Include="images\trash_can_96px.png" />
+    <Resource Include="images\buy_96px.png" />
+    <Resource Include="images\news_128px.png" />
+    <Resource Include="images\computer_96px.png" />
+    <Resource Include="images\list2_96px.png" />
+    <Resource Include="images\search_96px.png" />
+    <Resource Include="images\home_96px.png" />
+    <Resource Include="images\close_window_96px.png" />
     <Resource Include="images\home_64px.png" />
     <Resource Include="images\menu_64px.png" />
   </ItemGroup>
