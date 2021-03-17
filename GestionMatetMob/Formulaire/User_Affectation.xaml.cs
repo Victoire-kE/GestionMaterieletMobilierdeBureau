@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GestionMatetMob;
 
 namespace GestionMatetMob.Formulaire
 {
@@ -20,9 +21,18 @@ namespace GestionMatetMob.Formulaire
     /// </summary>
     public partial class User_Affectation : UserControl
     {
+        private Gestion_MaterielEntitie GM;
         public User_Affectation()
         {
             InitializeComponent();
+            GM = new Gestion_MaterielEntitie();
+            CbNomArticle.DataContext = GM.Articles.ToList();
+            CbNomArticle.DisplayMemberPath = "libelle_article";
+            CbNomArticle.SelectedValuePath = "code_article";
+
+            CbNomService.DataContext = GM.Services.ToList();
+            CbNomService.DisplayMemberPath = "nom_service";
+            CbNomService.SelectedValuePath = "code_service";
         }
     }
 }
