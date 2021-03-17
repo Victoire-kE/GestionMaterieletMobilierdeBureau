@@ -4,35 +4,99 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GestionMatetMob"
+        xmlns:viewmodels="clr-namespace:GestionMatetMob.Classes"
+        xmlns:views="clr-namespace:GestionMatetMob.Formulaire"
+        
         mc:Ignorable="d"
-        Title="Page d'acceuil" Height="600" Width="1100" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#FF3C1574">
-    <Grid Grid.ColumnSpan="2" Background="#FF2828EC" >
-        <StackPanel HorizontalAlignment="Left" Height="600" VerticalAlignment="Top" Width="227" Background="#FF323246">
+        Title="Pageacceuil" Height="600" Width="1100" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#FF3C1574" x:Name="PagePrincipale">
+    <Window.Resources>
+        <DataTemplate x:Name="userAccueilTemplate" DataType="{x:Type viewmodels:ClassUserAccueil}">
+            <views:User_Accueil DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="userAffectationTemplate" DataType="{x:Type viewmodels:ClassUserAffectaion}">
+            <views:User_Affectation DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="userArticleTemplate" DataType="{x:Type viewmodels:ClassUserListProduit}">
+            <views:User_List_Produit DataContext="{Binding}"/>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid Grid.ColumnSpan="2" Background="#FF1B3CCF" >
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Top" Margin="146,0,10,0" Grid.Column="4" Height="32">
+            <Button Background="Transparent" HorizontalAlignment="Center" Height="34"  Width="38" Click="BtQuitter" Margin="26,0,0,0">
+                <StackPanel>
+                    <Image Source=" C:\Users\Victoire_KE\source\repos\GestionMaterieletMobilierdeBureau\GestionMatetMob\images\close_window_96px.png" Height="35" ></Image>
+                    
+                </StackPanel>
+
+            </Button>
+
+        </StackPanel>
+        <StackPanel  Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" HorizontalAlignment="Left" Height="600" VerticalAlignment="Top" Width="227" Background="#FF323246">
             <StackPanel Margin="10,10,147,10" Height="41">
-                <ToggleButton Height="34" Margin="10,0" Background="Transparent">
+                <Button Height="34" Margin="10,0" Background="Transparent">
                     <Image Source="C:\Users\Victoire_KE\source\repos\GestionMaterieletMobilierdeBureau\GestionMatetMob\images\Image1.png" Height="46" RenderTransformOrigin="0.943,0.806" Width="41"/>
-                </ToggleButton>
+                </Button>
             </StackPanel>
             <StackPanel Margin="10,20" Height="514">
-                <ToggleButton Margin="10,25" Height="50" FontFamily="Trebuchet MS" FontSize="20" Click="Button_Click" >
+                <Button ToolTip="Accueil" Margin="0,25" Height="50" FontFamily="Trebuchet MS" Foreground="White" FontSize="20" Click="BtAccueil_Click" Background="Transparent" >
                     <StackPanel>
-                        <Image Margin="0,0,130,10" Source="C:\Users\Victoire_KE\source\repos\GestionMaterieletMobilierdeBureau\GestionMatetMob\images\home_64px.png" Width="48" HorizontalAlignment="Left" ></Image>
+                        <Image Margin="0,0,130,10" Source="C:\Users\Victoire_KE\source\repos\GestionMaterieletMobilierdeBureau\GestionMatetMob\images\home_96px.png" Width="48" HorizontalAlignment="Left" ></Image>
                         <TextBlock Margin="-120,-60,-150,0" Width="84" Height="30" FontFamily="Trebuchet ms" FontSize="20" TextAlignment="Center">Accueil</TextBlock>
-                    </StackPanel>  
-                </ToggleButton>
-                <Button Margin="10,25" Height="50" Content="Article" FontFamily="Trebuchet MS" FontSize="20"/>
-                <Button Margin="10,25" Height="50" Content="Affectation" FontFamily="Trebuchet MS" FontSize="20"/>
-                <Button Margin="10,25" Height="50" Content="Lister" FontFamily="Trebuchet MS" FontSize="20"/>
-                <Button Margin="10,25" Height="50" Content="Demande d'article" FontFamily="Trebuchet MS" FontSize="20"/>
+                    </StackPanel>
+                </Button>
+                
+                <Button ToolTip="Article" Margin="0,25" Height="50" Background="Transparent" Foreground="White" FontFamily="Trebuchet MS" FontSize="20" Click="btArticle_Click">
+                    <StackPanel>
+                        <Image Margin="0,0,130,10" Source="C:\Users\Victoire_KE\source\repos\GestionMaterieletMobilierdeBureau\GestionMatetMob\images\computer_96px.png" Width="48" HorizontalAlignment="Left" ></Image>
+                        <TextBlock Margin="-120,-60,-150,0" Width="84" Height="30" FontFamily="Trebuchet ms" FontSize="20" TextAlignment="Center">Article</TextBlock>
+                    </StackPanel>
+                </Button>
+
+                <Button ToolTip="Affectation" Margin="0,25" Height="50" Background="Transparent" Foreground="White"  FontFamily="Trebuchet MS" FontSize="20" Click="BtAffectation_Click">
+                    <StackPanel>
+                        <Image Margin="0,0,130,10" Source="C:\Users\Victoire_KE\source\repos\GestionMaterieletMobilierdeBureau\GestionMatetMob\images\buy_96px.png" Width="48" HorizontalAlignment="Left" ></Image>
+                        <TextBlock Margin="-120,-60,-150,0" Width="123" Height="30" FontFamily="Trebuchet ms" FontSize="20" TextAlignment="Center">Affectation</TextBlock>
+                    </StackPanel>
+                </Button>
+
+                <Button ToolTip="Lister" Margin="0,25" Height="50" Background="Transparent" Foreground="White"  FontFamily="Trebuchet MS" FontSize="20">
+                    <StackPanel>
+                           <Image Margin="0,0,130,10" Source="C:\Users\Victoire_KE\source\repos\GestionMaterieletMobilierdeBureau\GestionMatetMob\images\list2_96px.png" Width="48" HorizontalAlignment="Left" ></Image>
+                        <TextBlock Margin="-120,-60,-150,0" Width="84" Height="30" FontFamily="Trebuchet ms" FontSize="20" TextAlignment="Center">Lister</TextBlock>
+                    </StackPanel>
+                 
+                </Button>
+                <Button ToolTip="" Margin="0,25" Height="50" Background="Transparent" Foreground="White" FontFamily="Trebuchet MS" FontSize="20">
+                    <StackPanel>
+                        <Image Margin="0,0,130,10" Source="C:\Users\Victoire_KE\source\repos\GestionMaterieletMobilierdeBureau\GestionMatetMob\images\news_128px.png" Width="48" HorizontalAlignment="Left" ></Image>
+                        <TextBlock Margin="-120,-60,-150,0" Width="84" Height="30" FontFamily="Trebuchet ms" FontSize="20" TextAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Button>
 
             </StackPanel>
         </StackPanel>
-        <StackPanel  x:Name="pnlafficher" HorizontalAlignment="Left" Height="566" Margin="227,34,0,0" VerticalAlignment="Top" Width="873" Background="#FF171D30">
-            <ToggleButton HorizontalAlignment="Left" Height="48" Margin="799,0,0,0" Width="64"/>
-            <Control  ></Control>
+        <StackPanel Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="5" x:Name="pnlafficher" HorizontalAlignment="Left" Height="562"  VerticalAlignment="Top" Width="880" Background="#FF171D30" Margin="0,37,0,0">
+
+
 
         </StackPanel>
 
-
+        <ContentControl Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="5" Height="562" VerticalAlignment="Bottom" Content="{Binding}"/>
     </Grid>
 </Window>
